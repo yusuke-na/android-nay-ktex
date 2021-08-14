@@ -4,8 +4,24 @@ android kotlin extensions.
 ## LiveEvent
 One Shot LiveData. Notified to the observer when calling a `call` method.
 
+```kotlin
+val showEvent =  LiveEvent<Boolean>()
+
+fun callShowEvent(isShow: Boolean) {
+    showEvent.call(isShow)
+}
+```
+
+Activity and Fragment create Observer with this LiveEvent tag.
+
+```kotlin
+viewModel.showEvent.observe(this, "tag" { isShow ->
+    // add your code.
+})
+```
+
 ## LifecycleScopeSupport
-easily create lifecycleScope.
+Create a lifecycleScope easily.
 
 ## OnEachLifecycleObserver
 Lifecycle's Event Trigger Propagating LifecycleObserver.
