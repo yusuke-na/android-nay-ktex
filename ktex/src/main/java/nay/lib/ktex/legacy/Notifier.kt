@@ -1,3 +1,9 @@
+/*
+ * Created by Naaatan on 2021/09/04 17:45
+ * Copyright (c) 2021 . All rights reserved.
+ * Last modified 2021/08/14 0:02
+ */
+
 package nay.lib.ktex.legacy
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi

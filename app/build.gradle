@@ -1,7 +1,12 @@
+/*
+ * Created by Naaatan on 2021/09/04 17:45
+ * Copyright (c) 2021 . All rights reserved.
+ * Last modified 2021/08/11 15:52
+ */
+
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-kapt'
 }
 
 android {
