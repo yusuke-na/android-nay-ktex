@@ -15,9 +15,9 @@ fun callShowEvent(isShow: Boolean) {
 Activity and Fragment create Observer with this LiveEvent tag.
 
 ```kotlin
-viewModel.showEvent.observe(this, "tag" { isShow ->
+viewModel.showEvent.observe(this, "tag") { isShow ->
     // add your code.
-})
+}
 ```
 
 ## LifecycleScopeSupport
