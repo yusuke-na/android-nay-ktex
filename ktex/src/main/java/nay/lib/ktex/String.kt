@@ -10,7 +10,8 @@ import java.util.*
 
 val String.asHexByteArray: ByteArray
     inline get() {
-        val hexString = if (length % 2 == 0) this else "0$this"
+        val nonPrefix = this.removePrefix("0x")
+        val hexString = if (length % 2 == 0) nonPrefix else "0$nonPrefix"
         return hexString.chunked(2).map { it.uppercase(Locale.getDefault()).toInt(16).toByte() }
             .toByteArray()
     }

@@ -6,6 +6,8 @@
 
 package nay.lib.ktex
 
+import java.math.BigDecimal
+
 fun Int.hasFlag(flag: Int) = flag and this == flag
 
 fun Int.toByteArray() = byteArrayOf(0x00, 0x00, 0x00, 0x00).let {
@@ -15,3 +17,15 @@ fun Int.toByteArray() = byteArrayOf(0x00, 0x00, 0x00, 0x00).let {
     it[3] = (this and 0x000000FF).toByte()
     it
 }
+
+/**
+ * Move the decimal point to the left (10 ^ -[move])
+ */
+fun Int.movePointLeft(move: Int): BigDecimal =
+    this.toBigDecimal().movePointLeft(move)
+
+/**
+ * Move the decimal point to the right (10 ^ [move])
+ */
+fun Int.movePointRight(move: Int): BigDecimal =
+    this.toBigDecimal().movePointRight(move)

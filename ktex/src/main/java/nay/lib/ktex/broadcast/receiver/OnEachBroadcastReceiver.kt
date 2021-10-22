@@ -1,10 +1,10 @@
 /*
- * Created by Naaatan on 2021/09/04 17:45
+ * Created by Naaatan on 2021/10/22 10:11
  * Copyright (c) 2021 . All rights reserved.
- * Last modified 2021/08/14 15:19
+ * Last modified 2021/10/22 9:52
  */
 
-package nay.lib.ktex.lifecycle
+package nay.lib.ktex.broadcast.receiver
 
 import android.content.BroadcastReceiver
 import android.content.Context

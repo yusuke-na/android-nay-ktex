@@ -7,7 +7,17 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'maven-publish'
 }
+
+ext {
+    lib_version = '1.0.0'
+
+    lib_coroutine_version = '1.5.0'
+    lib_lifecycle_version = '2.3.1'
+}
+
+group = 'com.github.Naaatan'
 
 android {
     compileSdk 30
@@ -15,8 +25,6 @@ android {
     defaultConfig {
         minSdk 26
         targetSdk 30
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -47,11 +55,25 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // coroutine
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutine_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$lib_coroutine_version"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$lib_coroutine_version"
 
     // Lifecycles only (without ViewModel or LiveData)
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lib_lifecycle_version"
 
     // alternately - if using Java8, use the following instead of lifecycle-compiler
-    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lib_lifecycle_version"
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.Naaatan'
+                artifactId = 'android-nay-ktex'
+                version = lib_version
+            }
+        }
+    }
 }
