@@ -1,4 +1,6 @@
 # android-nay-ktex
+[![](https://jitpack.io/v/Naaatan/android-nay-ktex.svg)](https://jitpack.io/#Naaatan/android-nay-ktex)
+
 android kotlin extensions.
 
 ## LiveEvent
