@@ -3,6 +3,26 @@
 
 android kotlin extensions.
 
+## Setup
+
+Step 1. Add Jitpack repository to your project **build.gradle**
+```groovy
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+Step 2. Add dependency to your app **build.gradle**
+```groovy
+dependencies {
+    implementation 'com.github.Naaatan:android-nay-ktex:1.0.0'
+}
+```
+
+
 ## LiveEvent
 One Shot LiveData. Notified to the observer when calling a `call` method.
 
