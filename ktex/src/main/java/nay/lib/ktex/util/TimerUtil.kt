@@ -6,7 +6,6 @@
 
 package nay.lib.ktex.util
 
-import android.util.Log
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit

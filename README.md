@@ -60,12 +60,25 @@ Create a BroadcastReceiver easily.
 
  ```kotlin
  val receiver = broadcastReceiver { context, intent ->
-     when (intent?.action) {
-         BROADCAST_DEFAULT_ALBUM_CHANGED -> handleAlbumChanged()
-         BROADCAST_CHANGE_TYPE_CHANGED -> handleChangeTypeChanged()
-     }
- }
+    when (intent?.action) {
+        BROADCAST_DEFAULT_ALBUM_CHANGED -> handleAlbumChanged()
+        BROADCAST_CHANGE_TYPE_CHANGED -> handleChangeTypeChanged()
+    }
+}
  ```
 
-## ByteArray Extension
-byte Array to Hex String, to Int, toLong ext..
+## Util
+- NonNullCheck functions
+- TimerUtil (ex.. Format timeInMillis to 'HH:mm:ss' or 'HH:mm:ss.SSS'.
+
+## Extension
+- ByteArray
+- Collection
+- Context
+- Double
+- Float
+- Int
+- Short
+- String
+- Uri
+- View
