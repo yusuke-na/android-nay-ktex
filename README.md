@@ -18,7 +18,7 @@ allprojects {
 Step 2. Add dependency to your app **build.gradle**
 ```groovy
 dependencies {
-    implementation 'com.github.Naaatan:android-nay-ktex:1.0.0'
+    implementation 'com.github.yusuke-na:android-nay-ktex:1.0.0'
 }
 ```
 
